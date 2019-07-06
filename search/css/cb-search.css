@@ -1,4 +1,5 @@
 .search {
+    float: left;
     position: absolute;
     height: 30px;
     text-align: right;
