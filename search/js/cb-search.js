@@ -82,7 +82,7 @@ function searchInit() {
 }
 
 function searchMatching(arr, input) {
-    alert(arr);
+
 
     // 在所有文章内容中匹配查询值
     for (i = 0; i < arr.length; i++) {
@@ -90,12 +90,9 @@ function searchMatching(arr, input) {
             indexItem.push(i);
             var indexContent = arr[i].search(input);
             var l = input.length;
-            var step = 10;
             
             // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
-            arrResults.push(arr[i].slice(indexContent - step, indexContent) +
-                '<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>' +
-                arr[i].slice(indexContent + l, indexContent + l + step));
+            arrResults.push('<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>');
         }
     }
 
