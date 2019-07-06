@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
 <header id="top">
     <div class="wrapper">
@@ -6,6 +7,12 @@
         <small>{{site.brief-intro}}</small>
         <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
         <nav id="headerNav">
+        	<div class="search">
+                <i class="material-icons search-icon search-start">search</i>
+                <input type="text" class="search-input" placeholder="Searching..." />
+                <i class="material-icons search-icon search-clear">clear</i>
+                <div class="search-results"></div>
+            </div>
             <ul>
                 <li>
                     {% if page.url == '/' %}
@@ -31,13 +38,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-
-            <div class="search">
-                <i class="material-icons search-icon search-start">search</i>
-                <input type="text" class="search-input" placeholder="Searching..." />
-                <i class="material-icons search-icon search-clear">clear</i>
-                <div class="search-results"></div>
-            </div>
         </nav>
     </div>
 </header>
