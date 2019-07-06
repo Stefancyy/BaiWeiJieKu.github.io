@@ -82,6 +82,7 @@ function searchInit() {
 }
 
 function searchMatching(arr, input) {
+    alert(arr);
 
     // 在所有文章内容中匹配查询值
     for (i = 0; i < arr.length; i++) {
