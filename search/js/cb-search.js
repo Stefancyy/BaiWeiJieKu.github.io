@@ -68,7 +68,7 @@ function searchConfirm() {
         // 合法输入值的情况
         searchInit();
         searchValue = searchInput.value;
-        searchMatching(arrContents, searchValue);
+        searchMatching(arrTitles, searchValue);
     }
 }
 
