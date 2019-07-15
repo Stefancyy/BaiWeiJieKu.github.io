@@ -175,7 +175,9 @@ public class User {
             <column name="PASSWORD" />
         </property>
         <!--用来映射多对一关联实体，column属性指定外键列列名-->
-       <many-to-one name="address" column="address_id" unique="true" fetch="join"/>
+       <many-to-one name="address" class="Address" unique="true" fetch="join">
+       		<column name="address_id" />
+       </many-to-one>
     </class>
 </hibernate-mapping>
 
@@ -373,7 +375,7 @@ public class Address {
 
 #### 基于外键
 
-- 对于基于外键的1-1关联，其外键可以存放在任意一边
+- 对于基于外键的1-1关联，其外键可以存放在任意一边，比如一个用户对应一个地址
 - 在需要存放外键一端，增加many-to-one元素
 - 为many-to-one元素增加unique=“true” 属性来表示为1-1关联
 
@@ -454,7 +456,9 @@ public class User {
             <column name="PASSWORD" />
         </property>
         <!--映射关联实体Address，将其address属性映射为address表中的外键address_id,unique指定为一对一映射-->
-       <many-to-one name="address" column="address_id" unique="true"/>
+       <many-to-one name="address" class="Address" unique="true">
+       		<column name="ADDRESS_ID" />
+       </many-to-one>
     </class>
 </hibernate-mapping>
 
@@ -465,8 +469,8 @@ public class User {
 ```java
 
 public class Address {
-//Address类的标识属性
-private int addressid;
+	//Address类的标识属性
+	private int addressid;
     private String addressinfo;
 	//无参构造方法
 	public Address () {
@@ -617,7 +621,7 @@ public class User {
 
 public class Address {
 //Address类的标识属性
-private int addressid;
+	private int addressid;
     private String addressinfo;
 	//无参构造方法
 	public Address () {
