@@ -57,6 +57,15 @@ music-id: 453114638
 - 一个方法可以改变一个对象参数的状态
 - 一个方法不能让对象参数引用一个新的对象
 
+## 类加载过程
+
+![https://raw.githubusercontent.com/BaiWeiJieKu/BaiWeiJieKu.github.io/master/images/leijiazai.png]()
+
+- 首先cong.java生成了.class文件
+- 要运行程序，首先虚拟机里会有一个类加载器（class loader），把类加载到虚拟机里去，存到静态方法区里面了
+- 方法区就是上面的静态方法区。
+- 执行引擎：检索堆的：回收垃圾、怎么运行堆等；本地方法接口：提供给计数器用的。最后再加上本地方法库。
+
 ## 对象
 
 面向对象的三大特征：封装，继承，多态
@@ -100,6 +109,10 @@ Java中通过将数据声明为私有的(private)，再提供公共的（public�
 
 - 由于Java有自动的垃圾回收器，不需要人工回收内存，所以Java不支持析构器
 - 可以为任何一个类添加finalize方法，finalize方法将会在垃圾回收器清除对象之前调用
+
+### 对象内存解析
+
+[类和对象内存解析](https://blog.csdn.net/silent0001/article/details/89606204)
 
 ## 类设计技巧
 

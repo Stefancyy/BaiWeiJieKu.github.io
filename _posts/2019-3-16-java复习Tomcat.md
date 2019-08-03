@@ -253,13 +253,13 @@ music-id: 2602106546
 - Container用于封装和管理Servlet，以及具体处理request请求；
 - 知道了整个Tomcat顶层的分层架构和各个组件之间的关系以及作用，对于绝大多数的开发人员来说Server和Service对我们来说确实很远，而我们开发中绝大部分进行配置的内容是属于Connector和Container的，所以接下来介绍一下Connector和Container。
 
-###微妙关系
+### 微妙关系
 
 - 由上述内容我们大致可以知道一个请求发送到Tomcat之后，首先经过Service然后会交给我们的Connector，Connector用于接收请求并将接收的请求封装为Request和Response来具体处理，Request和Response封装完之后再交由Container进行处理，Container处理完请求之后再返回给Connector，最后在由Connector通过Socket将处理的结果返回给客户端，这样整个请求的就处理完了！
 - Connector最底层使用的是Socket来进行连接的，Request和Response是按照HTTP协议来封装的，所以Connector同时需要实现TCP/IP协议和HTTP协议！
 - Tomcat既然处理请求，那么肯定需要先接收到这个请求，接收请求这个东西我们首先就需要看一下Connector！
 
-###Connector
+### Connector
 
 - Connector用于接受请求并将请求封装成Request和Response，然后交给Container进行处理，
 - Container处理完之后在交给Connector返回给客户端
@@ -277,7 +277,7 @@ music-id: 2602106546
 - （2）Endpoint由于是处理底层的Socket网络连接，因此Endpoint是用来实现TCP/IP协议的，而Processor用来实现HTTP协议的，Adapter将请求适配到Servlet容器进行具体的处理。
 - （3）Endpoint的抽象实现AbstractEndpoint里面定义的Acceptor和AsyncTimeout两个内部类和一个Handler接口。Acceptor用于监听请求，AsyncTimeout用于检查异步Request的超时，Handler用于处理接收到的Socket，在内部调用Processor进行处理。
 
-###Container
+### Container
 
 - Container用于封装和管理Servlet，以及具体处理Request请求，在Connector内部包含了4个子容器
 
