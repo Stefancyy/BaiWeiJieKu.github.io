@@ -500,7 +500,7 @@ public class Hero {
 
 ![](http://stepimagewm.how2j.cn/744.png)
 
-特别感谢：http://how2j.cn/k/exception/exception-tutorial/332.html
+[特别感谢](http://how2j.cn/k/exception/exception-tutorial/332.html)
 
 ### API
 
@@ -551,14 +551,14 @@ Throwable(Throwable cause)
 - 在防御式编程中经常会用断言（Assertion）对参数和环境做出判断，避免程序因不当的输入或错误的环境而产生逻辑异常，断言在很多语言中都存在
 - 在Java中的断言使用的是assert关键字
 
-[详细参考][http://www.cnblogs.com/DreamDrive/p/5417283.html]
+[详细参考](http://www.cnblogs.com/DreamDrive/p/5417283.html)
 
 ## 日志
 
 - 一般在最开始写代码的时候总是会在代码中加入一些System.out.println方法的语句来观察代码运行的情况。这样需要反复加入和修改，日志API就是为了解决这个问题。
 - **java.util.logging**包就是JDK的日志开发包。
 
-[详细参考][https://www.cnblogs.com/xt0810/p/3659045.html]
+[详细参考](https://www.cnblogs.com/xt0810/p/3659045.html)
 
 ## 调试
 
