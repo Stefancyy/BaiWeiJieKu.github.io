@@ -1042,6 +1042,8 @@ public class Node {
 - 所以，以相同的key 把不同的value插入到 Map中会导致旧元素被覆盖，只留下最后插入的元素。 
 - 不过，同一个对象可以作为值插入到map中，只要对应的key不一样
 
+[面试题](https://baiweijieku.github.io/2019/03/10/java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E5%85%AB-%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/)
+
 ## HashSet
 
 - Set中的元素，不能重复
