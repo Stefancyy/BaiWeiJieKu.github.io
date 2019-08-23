@@ -711,6 +711,70 @@ public class TestCollection {
 
 ![](http://stepimagewm.how2j.cn/806.png)
 
+- **迭代器的注意点**：用for循环遍历集合，对集合中满足条件的元素进行remove操作报错：ConcurrentModificationException，所以，在遍历集合进行增、删操作时，要使用迭代器的方式
+
+```java
+package list;
+ 
+import java.util.*;
+ 
+public class Demo {
+ 
+    public static void main(String[] args) {
+        List<Object> obj = new ArrayList<Object>();
+        obj.add("a");
+        obj.add("b");
+        obj.add("c");
+        System.out.println("移除前：" + obj.toString());
+        Iterator<Object> it = obj.iterator();
+        for(int i=0; i<obj.size(); i++){
+            System.out.println(i);
+            Object name = it.next();
+            if("a".equals(name) || "b".equals(name)){
+                it.remove();
+                i--;
+            }
+        }
+        System.out.println("移除后： " + obj.toString());
+         
+    }
+ 
+}
+```
+
+```java
+package set;
+ 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+ 
+public class Demo {
+ 
+    public static void main(String[] args) {
+        Set<Object> obj = new HashSet<Object>();
+        obj.add("a");
+        obj.add("b");
+        obj.add("c");
+        System.out.println("移除前：" + obj.toString());
+        Iterator<Object> it = obj.iterator();
+        for(int i=0; i<obj.size(); i++){
+            System.out.println(i);
+            Object name = it.next();
+            if("a".equals(name) || "b".equals(name)){
+                it.remove();
+                i--;
+            }
+        }
+        System.out.println("移除后： " + obj.toString());
+         
+    }
+ 
+}
+```
+
+
+
 #### for-each
 
 - 使用增强型for循环可以非常方便的遍历ArrayList中的元素，这是很多开发人员的首选。
