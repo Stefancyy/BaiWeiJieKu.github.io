@@ -10,7 +10,6 @@ music-id: 28481105
 * content
 {:toc}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=487289489&auto=1&height=66"></iframe>
-
 <p>
 <h3>📋<strong>自我介绍</strong></h3>  
 
@@ -78,8 +77,9 @@ music-id: 28481105
 
 <hr>
 <h3>🎓<strong>还有，学习是一个非常愉快的过程。共同加油！</strong></h3>
-
 &nbsp;🔹2016.9.11 进入大学，开始程序员之路。<br/>
+
+ 🔹2017.9 开始学习java，方向选定为java后端开发<br/>
 
 <hr>
 <h3>🎓<strong>联系我：</strong></h3>
