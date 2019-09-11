@@ -193,3 +193,38 @@ config
 pageContext
 ```
 
+
+
+### Tomcat
+
+```
+Tomcat的缺省端口是多少，怎么修改？
+
+tomcat默认的端口是8080，还会占用8005，8009和8443端口。在server.xml中修改
+```
+
+```
+tomcat容器是如何创建servlet类实例？用到了什么原理？
+
+当容器启动时，会读取在webapps目录下所有的web应用中的web.xml文件，然后对xml文件进行解析，
+并读取servlet注册信息。然后，将每个应用中注册的servlet类都进行加载，并通过反射的方式实例化。
+（有时候也是在第一次请求时实例化）在servlet注册时加上如果为正数，则在一开始就实例化，
+如果不写或为负数，则第一次请求实例化。
+```
+
+```
+怎样进行内存调优?
+
+内存方式的设置是在catalina.sh，在catalina.bat中，调整一下JAVA_OPTS变量即可，因为后面的启动参数会把JAVA_OPTS作为JVM的启动参数来处理。
+```
+
+```
+tomcat 有那几种Connector 运行模式？
+
+bio(blocking I/O)是指阻塞式I/O操作，Tomcat在默认情况下就是以bio模式运行的。当客户端多时，会创建大量的处理线程。每个线程都要占用栈空间和一些CPU时间。阻塞可能带来频繁的上下文切换，而大部分的上下文切换是无意义的。就一般而言，bio模式是三种运行模式中性能最低的一种。
+
+nio(non-blocking I/O)是非阻塞I/O操作。nio是一个基于缓冲区并能提供非阻塞I/O操作的Java API，它拥有比bio更好的并发运行性能。由一个专门的线程来处理所有的 I/O 事件、并负责分发。 事件驱动机制，而不再同步地去监视事件。 线程之间通过 wait,notify 等方式通讯。保证每次上下文切换都是有意义的，减少无谓的线程切换。NIO采用了双向通道(channel)进行数据传输，而不是单向的流(stream)。
+
+apr(Apache portable Run-time libraries/Apache可移植运行库)是Apache HTTP服务器的支持库。在apr模式下，Tomcat将以JNI(Java Native Interface)的形式调用Apache HTTP服务器的核心动态链接库来处理文件读取或网络传输操作，从而大大提高Tomcat对静态文件的处理性能。Tomcat apr是在Tomcat上运行高并发应用的首选模式。
+```
+
