@@ -13,9 +13,9 @@ music-id: 28481105
 <p>
 <h3>📋<strong>自我介绍</strong></h3>  
 
-&nbsp;🔹目前位于山东烟台上学，软件工程专业，主学Java后端。<br/>
+&nbsp;🔹目前位于湖北武汉上学，机械工程专业，主学Java后端。<br/>
 
-&nbsp;🔹本人山东水瓶座男孩子一枚<br/>
+&nbsp;🔹本人湖北摩羯座男孩子一枚<br/>
 
 &nbsp;🔹皮囊在现实中历劫，灵魂在尘世间云游<br/>
 
@@ -41,7 +41,7 @@ music-id: 28481105
 
 &nbsp;🔹热爱有灵魂的事物<br/>
 
-&nbsp;🔹喜欢纯音乐（网易云ID：百味皆苦）<br/>
+&nbsp;🔹喜欢纯音乐<br/>
 
 &nbsp;🔹篮球（忠于黑曼巴精神）<br/>
 
@@ -90,13 +90,13 @@ music-id: 28481105
 
 &nbsp;🔹<a href="https://music.163.com/#/user/home?id=302749816">网易云音乐</a>让敲代码的手飞舞起来<br/>
 
-&nbsp;🔹email：2534964002@qq.com<br/>
+&nbsp;🔹email：547269074@qq.com<br/>
 
 
 <hr>
 <h3>🎓<strong>关于本站：</strong></h3>
 
-&nbsp;🔹<a href="https://github.com/Gaohaoyang/gaohaoyang.github.io">若您想使用这个 jekyll 博客主题请点击</a>
+&nbsp;🔹<a href="https://github.com/Stefancyy/Stefancyy.github.io">若您想使用这个 jekyll 博客主题请点击</a>
 <br/>
 
 {% include comments.html %}
